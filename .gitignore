@@ -1,0 +1,9 @@
+.idea/**
+.project
+.classpath
+.settings
+.java-version
+target
+.DS_Store
+.site-content
+out
