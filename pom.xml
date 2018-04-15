@@ -33,19 +33,24 @@
   <packaging>bundle</packaging>
   <name>Spring Quartz Component</name>
 
-  <url>http://archiva.apache.org/redback/components/${project.artifactId}</url>
+  <properties>
+    <scmBrowseUrl>https://gitbox.apache.org/repos/asf?a=tree;p=archiva-redback-components-spring-quartz.git</scmBrowseUrl>
+  </properties>
+
+
+  <url>${webUrl}/${project.artifactId}</url>
 
   <distributionManagement>
     <site>
       <id>apache.website</id>
-      <url>scm:svn:https://svn.apache.org/repos/asf/archiva/site-content/redback/components/${project.artifactId}</url>
+      <url>${siteUrl}/${project.artifactId}</url>
     </site>
   </distributionManagement>
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/archiva/redback/redback-components/trunk/spring-quartz/</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/archiva/redback/redback-components/trunk/spring-quartz/</developerConnection>
-    <url>http://svn.apache.org/viewvc/archiva/redback/redback-components/trunk/spring-quartz/</url>
+    <connection>scm:git:http://gitbox.apache.org/repos/asf/archiva-redback-components-spring-quartz.git</connection>
+    <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/archiva-redback-components-spring-quartz.git</developerConnection>
+    <url>${scmBrowseUrl};f=spring-quartz</url>
   </scm>
 
   <dependencies>
