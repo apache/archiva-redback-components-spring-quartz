@@ -30,6 +30,7 @@ def deploySettings = 'DefaultMavenSettingsProvider.1331204114925'
 
 node(labels) {
 
+    cleanWs()
     stage ('Clone Sources') {
         git url: 'https://gitbox.apache.org/repos/asf/archiva-redback-components-spring-quartz.git'
     }
