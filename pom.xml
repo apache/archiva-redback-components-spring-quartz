@@ -25,7 +25,6 @@
     <groupId>org.apache.archiva.redback.components</groupId>
     <artifactId>redback-components</artifactId>
     <version>2.5-SNAPSHOT</version>
-    <relativePath>../redback-components-parent/pom.xml</relativePath>
   </parent>
 
   <version>2.2-SNAPSHOT</version>
