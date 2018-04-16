@@ -38,7 +38,8 @@ node(labels) {
     stage ('Build') {
         withMaven(
                 maven: buildMvn,
-                jdk: buildJdk
+                jdk: buildJdk,
+                mavenSettingsConfig: deploySettings
         ) {
             // Run the maven build
             sh "mvn clean install -B -U -e -fae -Dmaven.compiler.fork=false"
