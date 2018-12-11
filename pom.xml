@@ -34,17 +34,11 @@
 
   <properties>
     <scmBrowseUrl>https://gitbox.apache.org/repos/asf?a=tree;p=archiva-redback-components-spring-quartz.git</scmBrowseUrl>
+    <site.staging.base>${project.basedir}/../site</site.staging.base>
   </properties>
 
 
   <url>${webUrl}/${project.artifactId}</url>
-
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>${siteUrl}/${project.artifactId}</url>
-    </site>
-  </distributionManagement>
 
   <scm>
     <connection>scm:git:http://gitbox.apache.org/repos/asf/archiva-redback-components-spring-quartz.git</connection>
