@@ -16,43 +16,5 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-/**
- *
- *
- * Jenkins Pipeline configuration.
- *
- */
 
-def labels = 'ubuntu'
-def buildJdk = 'JDK 1.8 (latest)'
-def buildMvn = 'Maven 3.5.2'
-def deploySettings = 'DefaultMavenSettingsProvider.1331204114925'
-
-node(labels) {
-
-    cleanWs()
-
-    stage ('Clone Sources') {
-        checkout scm
-    }
-
-    stage ('Build') {
-        withMaven(
-                maven: buildMvn,
-                jdk: buildJdk,
-                mavenSettingsConfig: deploySettings
-        ) {
-            sh "mvn clean install -B -U -e -fae -Dmaven.compiler.fork=false"
-        } 
-    }
-
-    stage ('Deploy') {
-        withMaven(
-                maven: buildMvn,
-                jdk: buildJdk,
-                mavenSettingsConfig: deploySettings
-        ) {
-            sh "mvn deploy -Dmaven.test.skip=true -B -U -e -fae -Dmaven.compiler.fork=false"
-        }
-    }
-}
+asfStandardBuild cmdline:"clean deploy"
